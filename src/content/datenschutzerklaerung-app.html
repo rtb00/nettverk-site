@@ -16,10 +16,10 @@ E-Mail: info@nettverk.app</p>
 <h2 id="kennung">3. Anonyme Kennung und Missbrauchsschutz (Supabase)</h2>
 <p>Beim ersten Start meldet sich die App ohne dein Zutun anonym bei unserem Server an. Dabei entsteht eine zufällige Kennung. Sie enthält weder Name noch Telefonnummer oder E-Mail-Adresse. Ab Version 1.4.2 zeigt dir die App deine Kennung unter Einstellungen → Datenschutz an; dort kannst du sie auch kopieren.</p>
 <p><strong>Zweck:</strong> Nur echte App-Installationen sollen unsere Server-Funktionen nutzen können, und die Nutzung pro Kennung ist begrenzt (Schutz vor Missbrauch und Kosten).<br>
-<strong>Gespeicherte Daten:</strong> die Kennung, der Zeitpunkt der Anmeldung sowie Zählwerte, wie oft eine Funktion in einem Zeitfenster genutzt wurde (Funktion, Zeitfenster, Anzahl). Inhalte speichern wir dabei nicht.<br>
+<strong>Gespeicherte Daten:</strong> die Kennung, der Zeitpunkt der Anmeldung, zu jeder Sitzung die IP-Adresse und die technische Kennung der App bzw. des Geräts (User-Agent) sowie Zählwerte, wie oft eine Funktion in einem Zeitfenster genutzt wurde (Funktion, Zeitfenster, Anzahl). Inhalte speichern wir dabei nicht.<br>
 <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der App) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am Schutz vor Missbrauch).<br>
 <strong>Erforderlichkeit:</strong> Ohne die anonyme Kennung stehen die KI-Funktionen und das Feedback nicht zur Verfügung. Alle übrigen Funktionen der App arbeiten lokal.<br>
-<strong>Speicherdauer:</strong> Zählwerte, die älter als 8 Tage sind, werden gelöscht. Wird eine Kennung 90 Tage lang nicht genutzt, löschen wir sie automatisch zusammen mit allen Zählwerten. Technische Anmeldeprotokolle löschen wir ebenfalls spätestens nach 90 Tagen. Eine frühere Löschung kannst du jederzeit verlangen (Abschnitt 11).<br>
+<strong>Speicherdauer:</strong> Zählwerte, die älter als 8 Tage sind, werden gelöscht. Wird eine Kennung 90 Tage lang nicht genutzt, löschen wir sie automatisch zusammen mit allen Zählwerten und Sitzungsdaten. Technische Anmeldeprotokolle löschen wir ebenfalls spätestens nach 90 Tagen. Eine frühere Löschung kannst du jederzeit verlangen (Abschnitt 11).<br>
 <strong>Empfänger:</strong> Supabase Pte. Ltd (Singapur) betreibt unseren Server als Auftragsverarbeiter. Die Datenbank liegt in der Region Frankfurt am Main (EU). Supabase kann für Betrieb und Support auch aus Ländern außerhalb der EU auf Daten zugreifen, etwa aus den USA. Grundlage dafür sind Standardvertragsklauseln nach Art. 46 Abs. 2 lit. c DSGVO. Eine Kopie erhältst du auf Anfrage.<br>
 <strong>Server-Protokolle:</strong> Beim Aufruf unseres Servers entstehen technische Protokolle, etwa zu Anmeldung und Funktionsaufrufen. Sie können die IP-Adresse deines Geräts enthalten. Supabase löscht diese Protokolle automatisch nach höchstens 28 Tagen.</p>
 
@@ -30,12 +30,12 @@ E-Mail: info@nettverk.app</p>
 
 <h2 id="sprach-journal">5. Sprach-Journal (OpenAI)</h2>
 <p>Wenn du das Sprach-Journal startest, überträgt die App deine Sprache während der Sitzung direkt an die Realtime-Schnittstelle von OpenAI. Dort wird sie verarbeitet, damit der KI-Coach antworten kann.</p>
-<p><strong>Übermittelte Daten:</strong> dein Sprach-Audio während der Sitzung und, weil sich die App direkt mit OpenAI verbindet, die IP-Adresse deines Geräts. Für den Verbindungsaufbau holt die App bei unserem Server einen Zugangsschlüssel, der 60 Sekunden gültig ist. Deine anonyme Kennung erhält OpenAI dabei nicht. Was du im Journal erzählst, bestimmst du selbst. Es kann auch Angaben zu deiner Gesundheit oder deinem Befinden enthalten.<br>
+<p><strong>Übermittelte Daten:</strong> dein Sprach-Audio während der Sitzung und, weil sich die App direkt mit OpenAI verbindet, die IP-Adresse deines Geräts. Für den Verbindungsaufbau holt die App bei unserem Server einen Zugangsschlüssel, der 60 Sekunden gültig ist. Deine anonyme Kennung erhält OpenAI dabei nicht. Was du im Journal erzählst, bestimmst du selbst. Es kann auch besondere Kategorien personenbezogener Daten enthalten, etwa Angaben zu Gesundheit, Religion oder Sexualleben.<br>
 <strong>Zusammenfassungen:</strong> Die kurze Zusammenfassung zu jeder Frage erstellt die KI während der Sitzung. Gespeichert wird sie nur auf deinem Gerät.<br>
 <strong>Keine Speicherung bei uns:</strong> Weder Audio noch Text des Gesprächs speichern wir auf unseren Servern. Eine Abschrift (Transkription) bei OpenAI ist abgeschaltet.<br>
 <strong>Bei OpenAI:</strong> OpenAI nutzt Daten aus der Schnittstelle nach eigenen Angaben standardmäßig nicht zum Training. Zur Erkennung von Missbrauch speichert OpenAI Daten bis zu 30 Tage.<br>
 <strong>Empfänger:</strong> OpenAI Ireland Ltd., 1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper, Dublin 1, D01 YC43, Irland, als Auftragsverarbeiter. OpenAI Ireland kann Daten an Konzerngesellschaften oder Unterauftragsverarbeiter außerhalb des EWR weitergeben, insbesondere in die USA. Grundlage dafür sind Standardvertragsklauseln nach Art. 46 Abs. 2 lit. c DSGVO. Eine Kopie erhältst du auf Anfrage.<br>
-<strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Soweit du Angaben zu deiner Gesundheit machst, deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO). Zum Widerruf siehe Abschnitt 4.</p>
+<strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Soweit du besondere Kategorien personenbezogener Daten nennst (z. B. Gesundheit, Religion, Sexualleben), deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO). Zum Widerruf siehe Abschnitt 4.</p>
 
 <h2 id="ki-organisation">6. KI-Organisation von Notizen (OpenRouter)</h2>
 <p>Wenn du beim Erfassen einer Notiz zu einem Kontakt die KI-Organisation nutzt, sendet die App an unseren Server:<br>
@@ -47,7 +47,7 @@ das heutige Datum.</p>
 <p><strong>Empfänger:</strong> OpenRouter, Inc., 169 Madison Ave #2404, New York, NY 10016, USA, als Auftragsverarbeiter. Der Modellanbieter (derzeit OpenAI) ist Unterauftragsverarbeiter von OpenRouter.<br>
 <strong>Speicherung:</strong> OpenRouter löscht Ein- und Ausgaben nach eigenen Angaben direkt nach der Antwort, außer bei gesetzlichen Pflichten oder zur Abwehr von Missbrauch. Beim Modellanbieter gelten dessen Fristen, bei OpenAI bis zu 30 Tage zur Missbrauchserkennung.<br>
 <strong>Drittland:</strong> Die Verarbeitung findet in den USA statt. Grundlage sind Standardvertragsklauseln nach Art. 46 Abs. 2 lit. c DSGVO. Eine Kopie erhältst du auf Anfrage.<br>
-<strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Soweit dein Text Angaben zur Gesundheit enthält, deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO). Zum Widerruf siehe Abschnitt 4.</p>
+<strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Soweit dein Text besondere Kategorien personenbezogener Daten enthält (z. B. Gesundheit, Religion, Sexualleben), deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO). Zum Widerruf siehe Abschnitt 4.</p>
 
 <h2 id="gespraechstipps">7. Gesprächstipps</h2>
 <p>Für Gesprächstipps fragt die App über unseren Server allgemeine Themenvorschläge bei OpenRouter an. Die Anfrage ist fest vorgegeben und enthält keine personenbezogenen Daten. Unser Server prüft dabei nur die anonyme Kennung für die Nutzungsbegrenzung (Abschnitt 3).</p>
@@ -70,6 +70,7 @@ das heutige Datum.</p>
 <tr><td>Kontakte, Notizen, Journal-Zusammenfassungen, Einwilligungen</td><td>nur dein Gerät</td><td>bis du sie oder die App löschst</td></tr>
 <tr><td>Anonyme Kennung</td><td>Supabase</td><td>automatische Löschung nach 90 Tagen ohne Nutzung, früher auf Anfrage</td></tr>
 <tr><td>Nutzungszähler</td><td>Supabase</td><td>8 Tage, spätestens mit der Kennung</td></tr>
+<tr><td>Sitzungsdaten (IP-Adresse, User-Agent)</td><td>Supabase</td><td>solange die Kennung besteht, höchstens 90 Tage nach der letzten Nutzung</td></tr>
 <tr><td>Anmeldeprotokolle</td><td>Supabase</td><td>höchstens 90 Tage</td></tr>
 <tr><td>Server-Protokolle (ggf. mit IP-Adresse)</td><td>Supabase</td><td>höchstens 28 Tage</td></tr>
 <tr><td>Sprach-Audio</td><td>OpenAI</td><td>nicht bei uns; bei OpenAI bis zu 30 Tage zur Missbrauchserkennung</td></tr>
