@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import content from '../content/datenschutzerklaerung-app.html?raw';
+---
+<Base title="Datenschutzerklärung App – nettverk" barTitle="Datenschutzerklärung App">
+  <main class="legal">
+    <h1>Datenschutzerklärung</h1>
+    <Fragment set:html={content} />
+  </main>
+  <div class="legal-footer"><Footer /></div>
+  <div class="footer-end"></div>
+</Base>

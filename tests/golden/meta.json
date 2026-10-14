@@ -1,0 +1,274 @@
+{
+ "home-desktop": [
+  {
+   "file": "home-desktop-00.png",
+   "offset": 0
+  },
+  {
+   "file": "home-desktop-01.png",
+   "offset": 900
+  },
+  {
+   "file": "home-desktop-02.png",
+   "offset": 1800
+  },
+  {
+   "file": "home-desktop-03.png",
+   "offset": 2700
+  },
+  {
+   "file": "home-desktop-04.png",
+   "offset": 3600
+  },
+  {
+   "file": "home-desktop-05.png",
+   "offset": 4500
+  },
+  {
+   "file": "home-desktop-06.png",
+   "offset": 5400
+  }
+ ],
+ "datenschutzerklarung-web-desktop": [
+  {
+   "file": "datenschutzerklarung-web-desktop-00.png",
+   "offset": 0
+  },
+  {
+   "file": "datenschutzerklarung-web-desktop-01.png",
+   "offset": 900
+  },
+  {
+   "file": "datenschutzerklarung-web-desktop-02.png",
+   "offset": 1800
+  }
+ ],
+ "datenschutzerklaerung-app-desktop": [
+  {
+   "file": "datenschutzerklaerung-app-desktop-00.png",
+   "offset": 0
+  },
+  {
+   "file": "datenschutzerklaerung-app-desktop-01.png",
+   "offset": 900
+  }
+ ],
+ "impressum-desktop": [
+  {
+   "file": "impressum-desktop-00.png",
+   "offset": 0
+  }
+ ],
+ "agb-desktop": [
+  {
+   "file": "agb-desktop-00.png",
+   "offset": 0
+  },
+  {
+   "file": "agb-desktop-01.png",
+   "offset": 900
+  },
+  {
+   "file": "agb-desktop-02.png",
+   "offset": 1800
+  },
+  {
+   "file": "agb-desktop-03.png",
+   "offset": 2700
+  },
+  {
+   "file": "agb-desktop-04.png",
+   "offset": 3600
+  },
+  {
+   "file": "agb-desktop-05.png",
+   "offset": 4500
+  },
+  {
+   "file": "agb-desktop-06.png",
+   "offset": 5400
+  }
+ ],
+ "home-mobile": [
+  {
+   "file": "home-mobile-00.png",
+   "offset": 0
+  },
+  {
+   "file": "home-mobile-01.png",
+   "offset": 844
+  },
+  {
+   "file": "home-mobile-02.png",
+   "offset": 1688
+  },
+  {
+   "file": "home-mobile-03.png",
+   "offset": 2532
+  },
+  {
+   "file": "home-mobile-04.png",
+   "offset": 3376
+  },
+  {
+   "file": "home-mobile-05.png",
+   "offset": 4220
+  },
+  {
+   "file": "home-mobile-06.png",
+   "offset": 5064
+  },
+  {
+   "file": "home-mobile-07.png",
+   "offset": 5908
+  },
+  {
+   "file": "home-mobile-08.png",
+   "offset": 6752
+  },
+  {
+   "file": "home-mobile-09.png",
+   "offset": 7596
+  }
+ ],
+ "datenschutzerklarung-web-mobile": [
+  {
+   "file": "datenschutzerklarung-web-mobile-00.png",
+   "offset": 0
+  },
+  {
+   "file": "datenschutzerklarung-web-mobile-01.png",
+   "offset": 844
+  },
+  {
+   "file": "datenschutzerklarung-web-mobile-02.png",
+   "offset": 1688
+  },
+  {
+   "file": "datenschutzerklarung-web-mobile-03.png",
+   "offset": 2532
+  },
+  {
+   "file": "datenschutzerklarung-web-mobile-04.png",
+   "offset": 3376
+  },
+  {
+   "file": "datenschutzerklarung-web-mobile-05.png",
+   "offset": 4220
+  }
+ ],
+ "datenschutzerklaerung-app-mobile": [
+  {
+   "file": "datenschutzerklaerung-app-mobile-00.png",
+   "offset": 0
+  },
+  {
+   "file": "datenschutzerklaerung-app-mobile-01.png",
+   "offset": 844
+  },
+  {
+   "file": "datenschutzerklaerung-app-mobile-02.png",
+   "offset": 1688
+  },
+  {
+   "file": "datenschutzerklaerung-app-mobile-03.png",
+   "offset": 2532
+  }
+ ],
+ "impressum-mobile": [
+  {
+   "file": "impressum-mobile-00.png",
+   "offset": 0
+  }
+ ],
+ "agb-mobile": [
+  {
+   "file": "agb-mobile-00.png",
+   "offset": 0
+  },
+  {
+   "file": "agb-mobile-01.png",
+   "offset": 844
+  },
+  {
+   "file": "agb-mobile-02.png",
+   "offset": 1688
+  },
+  {
+   "file": "agb-mobile-03.png",
+   "offset": 2532
+  },
+  {
+   "file": "agb-mobile-04.png",
+   "offset": 3376
+  },
+  {
+   "file": "agb-mobile-05.png",
+   "offset": 4220
+  },
+  {
+   "file": "agb-mobile-06.png",
+   "offset": 5064
+  },
+  {
+   "file": "agb-mobile-07.png",
+   "offset": 5908
+  },
+  {
+   "file": "agb-mobile-08.png",
+   "offset": 6752
+  },
+  {
+   "file": "agb-mobile-09.png",
+   "offset": 7596
+  },
+  {
+   "file": "agb-mobile-10.png",
+   "offset": 8440
+  },
+  {
+   "file": "agb-mobile-11.png",
+   "offset": 9284
+  },
+  {
+   "file": "agb-mobile-12.png",
+   "offset": 10128
+  },
+  {
+   "file": "agb-mobile-13.png",
+   "offset": 10972
+  },
+  {
+   "file": "agb-mobile-14.png",
+   "offset": 11816
+  },
+  {
+   "file": "agb-mobile-15.png",
+   "offset": 12660
+  },
+  {
+   "file": "agb-mobile-16.png",
+   "offset": 13504
+  },
+  {
+   "file": "agb-mobile-17.png",
+   "offset": 14348
+  },
+  {
+   "file": "agb-mobile-18.png",
+   "offset": 15192
+  },
+  {
+   "file": "agb-mobile-19.png",
+   "offset": 16036
+  },
+  {
+   "file": "agb-mobile-20.png",
+   "offset": 16880
+  },
+  {
+   "file": "agb-mobile-21.png",
+   "offset": 17724
+  }
+ ]
+}

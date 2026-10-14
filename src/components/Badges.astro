@@ -1,0 +1,15 @@
+---
+export interface Props {gap?: number}
+const {gap = 8} = Astro.props;
+const play = "https://play.google.com/store/apps/details?id=app.rtb00.nettverk&hl=de_AT&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1";
+const app = "https://apps.apple.com/de/app/nettverk/id6496847933?itscg=30200&itsct=apps_box_badge&mttnsubad=6496847933";
+---
+<div class="badge-row d" style={`--gap:${gap}px`}>
+  <a class="play" href={play} rel="noopener"><img src="/assets/play_store_badge.png" alt="Jetzt bei Google Play" width="564" height="168"></a>
+  <span class="gapx"></span>
+  <a class="app" href={app} rel="noopener"><img src="/assets/app_store_badge.png" alt="Laden im App Store" width="1000" height="335"></a>
+</div>
+<div class="mobile-badges">
+  <a href={app} rel="noopener" style="height:50px"><img src="/assets/app_store_badge.png" alt="Laden im App Store" width="1000" height="335"></a>
+  <a href={play} rel="noopener" style={`height:48px;margin-top:${gap === 8 ? 10 : 24}px`}><img src="/assets/play_store_badge.png" alt="Jetzt bei Google Play" width="564" height="168"></a>
+</div>

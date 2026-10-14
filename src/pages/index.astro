@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import Badges from '../components/Badges.astro';
+import books from '../data/books.json';
+import faq from '../data/faq.json';
+import team from '../data/teamtext.json';
+import bookimg from '../data/bookimg.json';
+
+const benefits = [
+  {icon: 'campaign', bg: '#DAF3F7', title: 'Selbstbewusst kommunizieren', text: 'Stärke deine Kommunikation und hinterlasse einen bleibenden Eindruck.'},
+  {icon: 'local_fire_department', bg: '#FEEACE', title: 'Kontakt zu Freunden halten', text: 'Verliere nie wieder den Draht zu den Menschen, die dir wichtig sind.'},
+  {img: '/assets/network_intelligence.png', bg: '#F7DAED', title: 'Nichts mehr vergessen', text: 'Alles, was du nicht vergessen möchtest, organisiert und sicher an einem Ort.'},
+  {icon: 'volunteer_activism', bg: '#DAF7E8', title: 'Erfüllende Freundschaften', text: 'Erlebe Freundschaften, die gemeinsam wachsen und dir Halt im Alltag geben.'},
+];
+const cards = [
+  {title: 'Bucketlists', text: 'Weniger langweiliger Alltag, mehr spannende Abenteuer mit:', img: 'bucket_mockup.png'},
+  {title: 'Streaks', text: 'Verliere keine Freunde mehr aus den Augen mit:', img: 'streak_mockup.png'},
+  {title: 'Persönliche Notizen', text: 'Vom oberflächlichen Kontakt zum engsten Freund mit:', img: 'notes_mockup.png'},
+  {title: 'Geschenkideen', text: 'Die perfekten Aufmerksamkeiten für deine Freunde und Familie mit:', img: 'gifts_mockup.png'},
+];
+const members = [
+  {name: 'Robin Bauer', pos: 'Geschäftsführung & Produktentwicklung', img: 'robin.jpg'},
+  {name: 'Patrick Schneider', pos: 'Marketing', img: 'patrick.jpg'},
+  {name: 'Nico Maiser', pos: 'Fotografie und Videografie', img: 'nico.jpg'},
+];
+// Original lädt die Hintergründe zur Laufzeit von picsum.photos (externer Dienst, seed = Titel).
+// Hier: dieselben Bilder einmalig geladen und selbst ausgeliefert (public/assets/books), keine externe Anfrage.
+const img = (t: string) => `url(/assets/books/${bookimg[t as keyof typeof bookimg]})`;
+const style = (c: {title: string}) => `--bd:${img(c.title)};--bm:${img(c.title)}`;
+// Reihe 2: Desktop Titel=Autor/Beschreibung=Buch, Mobil umgekehrt (wie im Original)
+const style2 = (c: {title: string; description: string}) => `--bd:${img(c.title)};--bm:${img(c.description)}`;
+// 100 Wiederholungen im Original; Reihe 2 beginnt am Listenende.
+const row1 = [...books.first, ...books.first, ...books.first];
+const rot = books.second.slice(12).concat(books.second.slice(0, 12));
+const row2 = [...rot, ...rot, ...rot];
+---
+<Base title="nettverk App" description="nettverk - media made social" hashRedirect>
+  <main>
+    <section class="hero">
+      <div class="hero-row">
+        <div class="sp"></div>
+        <div class="hero-text">
+          <h1 class="hm">Level up your<br>Social Life</h1>
+          <p class="sub">Mit nettverk - deiner Geheimwaffe gegen oberflächliche Beziehungen</p>
+          <div class="badges"><Badges /></div>
+          <p class="join">Werde Teil der Commnity</p>
+        </div>
+        <div class="hero-img"><img src="/assets/hero_mockup.png" alt="nettverk App" width="300" height="526"></div>
+      </div>
+    </section>
+
+    <section class="sec-benefits">
+      <div class="box">
+        <h2 class="hm center">So funktioniert's</h2>
+        <p class="lbl">Mehr Socializen, weniger Einsamkeit.</p>
+        <div class="wrapbox outer">
+          <div class="wrapbox">
+            {benefits.slice(0, 2).map(b => (
+              <div class="benefit"><div class="ic" style={`background:${b.bg}`}>{b.img ? <img src={b.img} alt="" width="28" height="28"> : <span class="mi" aria-hidden="true">{b.icon}</span>}</div><h3>{b.title}</h3><p>{b.text}</p></div>
+            ))}
+          </div>
+          <div class="wrapbox">
+            {benefits.slice(2).map(b => (
+              <div class="benefit"><div class="ic" style={`background:${b.bg}`}>{b.img ? <img src={b.img} alt="" width="28" height="28"> : <span class="mi" aria-hidden="true">{b.icon}</span>}</div><h3>{b.title}</h3><p>{b.text}</p></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-academy">
+      <p class="tl center tl-wrap" style="padding:0 40px">Erkenntnisse der weltbesten Denker ...</p>
+      <div class="l1" style="width:100%">
+        <div class="slider" aria-hidden="true"><div class="slider-track a">{row1.map(c => <div class="mcard" style={style(c)}><b>{c.title}</b><span>{c.description}</span></div>)}</div></div>
+        <div class="slider" aria-hidden="true"><div class="slider-track b">{row2.map(c => <div class="mcard" style={style2(c)}><b class="vd">{c.title}</b><span class="vd">{c.description}</span><b class="vm">{c.description}</b><span class="vm">{c.title}</span></div>)}</div></div>
+      </div>
+      <div class="academy-2">
+        <p class="tl center">... kompakt und verständlich<br>für dich auf den Punkt gebracht</p>
+        <div class="academy-row">
+          <div class="txt">
+            <h2 class="hs">Entdecke die<br>Social Academy</h2>
+            <p>Nutze täglich kurze, anschauliche Lerneinheiten, um fundierte Konzepte aus über 30 Büchern, 20 TED Talks und Kursen rennomierter Universitäten zu verinnerlichen.</p>
+          </div>
+          <div class="img"><img src="/assets/academy_mockup.png" alt="Social Academy" width="1946" height="1425" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-heads">
+      <div class="heads-row">
+        <div class="img"><img src="/assets/headsup_mockup.png" alt="Heads Up" width="2105" height="2029" loading="lazy"></div>
+        <div class="txt">
+          <h2 class="hs">Heads Up</h2>
+          <p>Mit selbst erstellten oder individuell generierten Gesprächsthemen, Erinnerungen an wichtige Details deines Gesprächspartners und anwendbare Skills hast du immer einen Plan für dein nächstes Gespräch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-more">
+      <h2 class="hs" style="font-weight:400">Kommunikation ist wichtig,</h2>
+      <p class="hs">aber echte Freundschaften brauchen mehr ...</p>
+      <div class="wrapbox">
+        <div class="wrapbox">
+          {cards.slice(0, 2).map(c => <div class="scard"><div class="top"><p>{c.text}</p><h3>{c.title}</h3></div><div class="pic" style={`background-image:url(/assets/${c.img})`} role="img" aria-label={c.title}></div></div>)}
+        </div>
+        <div class="wrapbox">
+          {cards.slice(2).map(c => <div class="scard"><div class="top"><p>{c.text}</p><h3>{c.title}</h3></div><div class="pic" style={`background-image:url(/assets/${c.img})`} role="img" aria-label={c.title}></div></div>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-dark">
+      <div class="band"></div>
+      <div class="dark-row">
+        <div class="txt">
+          <h2 class="hs">Und natürlich<br>Dark Mode.</h2>
+          <p>Weil starke Verbindungen im Dunkeln noch heller leuchten. Perfekt, um bei Dates nicht beim Spicken erwischt zu werden. Möge der Smalltalk mit dir sein.</p>
+        </div>
+        <div class="img"><img src="/assets/darkmode_mockup.png" alt="Dark Mode" width="1124" height="1800" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="sec-dl">
+      <h2 class="hs">Jetzt downloaden</h2>
+      <div class="bw"><Badges gap={24} /></div>
+    </section>
+
+    <section class="sec-team">
+      <h2 class="hs center">Unser Team</h2>
+      <p class="mission">Unsere Mission ist es, deine Social Skills durch personalisierte alltagsnahe Lerninhalte zu verbessern!</p>
+      <div class="team-row">
+        {members.map(m => <div class="member"><img src={`/assets/${m.img}`} alt={m.name} width="110" height="110" loading="lazy"><h3 class="ts">{m.name}</h3><p class="bs">{m.pos}</p></div>)}
+      </div>
+      <p class="team-text">{team.text}</p>
+    </section>
+
+    <section class="sec-faq">
+      <h2 class="hs center">FAQ: Häufig gefragt - hier geklärt</h2>
+      <div class="faq">
+        {faq.map(f => (
+          <details>
+            <summary><span class="ts">{f.question}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg></summary>
+            <p class="ans">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <div class="footer-end"></div>
+</Base>

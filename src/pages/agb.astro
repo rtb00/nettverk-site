@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import content from '../content/agb.html?raw';
+---
+<Base title="Allgemeine Geschäftsbedingungen – nettverk" barTitle="Allgemeine Geschäftsbedingungen">
+  <main class="legal">
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <Fragment set:html={content} />
+  </main>
+  <div class="legal-footer"><Footer /></div>
+  <div class="footer-end"></div>
+</Base>

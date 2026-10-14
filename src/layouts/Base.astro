@@ -1,0 +1,30 @@
+---
+import '@fontsource/roboto/latin-400.css';
+import '@fontsource/roboto/latin-500.css';
+import '@fontsource/roboto/latin-700.css';
+import '@fontsource/material-icons-outlined/latin-400.css';
+import '../styles/global.css';
+export interface Props {title: string; description?: string; barTitle?: string; hashRedirect?: boolean}
+const {title, description, barTitle, hashRedirect = false} = Astro.props;
+// Alte Flutter-Hash-URLs (/#/impressum) auf die neuen Pfade (/impressum/) umleiten; unbekannte bleiben auf der Startseite.
+const redirect = `(function(){var h=location.hash;if(h.indexOf("#/")!==0)return;var r=h.slice(2).replace(/\\/+$/,"").split(/[?#]/)[0];var ok={"datenschutzerklarung-web":1,"datenschutzerklaerung-app":1,"impressum":1,"agb":1};if(Object.prototype.hasOwnProperty.call(ok,r))location.replace("/"+r+"/");})();`;
+---
+<!doctype html>
+<html lang="de">
+<head>
+  {hashRedirect && <script is:inline set:html={redirect}></script>}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  {description && <meta name="description" content={description}>}
+  <link rel="icon" href="/favicon.png" type="image/png">
+</head>
+<body>
+  <header class={barTitle ? "appbar t56" : "appbar"}>
+    {barTitle
+      ? <a href="/" class="title">{barTitle}</a>
+      : <a href="/"><img src="/assets/logo.png" alt="nettverk" width="100" height="21"></a>}
+  </header>
+  <slot />
+</body>
+</html>
