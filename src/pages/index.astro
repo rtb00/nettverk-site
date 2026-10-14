@@ -4,7 +4,6 @@ import Footer from '../components/Footer.astro';
 import Badges from '../components/Badges.astro';
 import books from '../data/books.json';
 import faq from '../data/faq.json';
-import team from '../data/teamtext.json';
 import bookimg from '../data/bookimg.json';
 
 const benefits = [
@@ -18,11 +17,6 @@ const cards = [
   {title: 'Streaks', text: 'Verliere keine Freunde mehr aus den Augen mit:', img: 'streak_mockup.png'},
   {title: 'Persönliche Notizen', text: 'Vom oberflächlichen Kontakt zum engsten Freund mit:', img: 'notes_mockup.png'},
   {title: 'Geschenkideen', text: 'Die perfekten Aufmerksamkeiten für deine Freunde und Familie mit:', img: 'gifts_mockup.png'},
-];
-const members = [
-  {name: 'Robin Bauer', pos: 'Geschäftsführung & Produktentwicklung', img: 'robin.jpg'},
-  {name: 'Patrick Schneider', pos: 'Marketing', img: 'patrick.jpg'},
-  {name: 'Nico Maiser', pos: 'Fotografie und Videografie', img: 'nico.jpg'},
 ];
 // Original lädt die Hintergründe zur Laufzeit von picsum.photos (externer Dienst, seed = Titel).
 // Hier: dieselben Bilder einmalig geladen und selbst ausgeliefert (public/assets/books), keine externe Anfrage.
@@ -126,14 +120,6 @@ const row2 = [...rot, ...rot, ...rot];
       <div class="bw"><Badges gap={24} /></div>
     </section>
 
-    <section class="sec-team">
-      <h2 class="hs center">Unser Team</h2>
-      <p class="mission">Unsere Mission ist es, deine Social Skills durch personalisierte alltagsnahe Lerninhalte zu verbessern!</p>
-      <div class="team-row">
-        {members.map(m => <div class="member"><img src={`/assets/${m.img}`} alt={m.name} width="110" height="110" loading="lazy"><h3 class="ts">{m.name}</h3><p class="bs">{m.pos}</p></div>)}
-      </div>
-      <p class="team-text">{team.text}</p>
-    </section>
 
     <section class="sec-faq">
       <h2 class="hs center">FAQ: Häufig gefragt - hier geklärt</h2>

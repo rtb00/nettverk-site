@@ -56,12 +56,10 @@ h1,h2,h3,p{margin:0;font:inherit;letter-spacing:inherit}
 .slider{height:140px;overflow:hidden;width:100%;position:relative}
 .slider+.slider{margin-top:12px}
 .slider-track{display:flex;width:max-content;will-change:transform}
-.slider-track.a{animation:slide-a 400s linear infinite alternate}
-.slider-track.b{animation:slide-b 400s linear infinite alternate}
-@keyframes slide-a{from{transform:translateX(var(--s,-260px))}to{transform:translateX(-12000px)}}
-@keyframes slide-b{from{transform:translateX(-12000px)}to{transform:translateX(-102px)}}
-.slider-track.a{transform:translateX(-260px)}
-.slider-track.b{transform:translateX(-102px)}
+.slider-track.a{animation:slide-a 120s linear infinite}
+.slider-track.b{animation:slide-b 120s linear infinite}
+@keyframes slide-a{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
+@keyframes slide-b{from{transform:translateX(-33.3333%)}to{transform:translateX(0)}}
 @media (prefers-reduced-motion:reduce){.slider-track{animation:none!important}}
 .mcard{flex:none;width:130px;height:140px;margin-right:8px;border-radius:8px;padding:8px 10px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background-color:#555;background-image:var(--bd);background-size:cover;background-position:center}
 .mcard .vm{display:none}
@@ -96,14 +94,6 @@ h1,h2,h3,p{margin:0;font:inherit;letter-spacing:inherit}
 .dark-row .img img{width:100%;height:auto}
 .sec-dl{margin-top:170px;display:flex;flex-direction:column;align-items:center}
 .sec-dl .bw{margin-top:24px;width:350px;--gap:24px}
-.sec-team{margin-top:300px;display:flex;flex-direction:column;align-items:center}
-.sec-team .mission{margin-top:24px;width:400px;max-width:100%;color:var(--dark);text-align:center}
-.team-row{margin-top:32px;width:720px;max-width:100%;display:flex;justify-content:space-between}
-.member{width:180px;display:flex;flex-direction:column;align-items:center;text-align:center}
-.member img{width:110px;height:110px;border-radius:50%;object-fit:cover;background:#EEE}
-.member h3{margin-top:12px}
-.member p{margin-top:4px}
-.team-text{margin-top:32px;padding:0 42px;text-align:center;white-space:pre-wrap}
 .sec-faq{margin-top:100px;padding:0 40px;display:flex;flex-direction:column;align-items:center}
 .faq{margin-top:12px;width:920px;max-width:100%}
 .faq details{background:#F6F6F6;border-radius:8px;margin-bottom:8px}
@@ -163,8 +153,6 @@ h1,h2,h3,p{margin:0;font:inherit;letter-spacing:inherit}
   .mcard{background-image:var(--bm)}
   .mcard .vd{display:none}
   .mcard .vm{display:block}
-  .slider-track.a{transform:translateX(-325px)}
-  .slider-track.b{transform:translateX(-1080px)}
   .sec-more{margin-top:60px}
   .sec-dark{margin-top:100px;min-height:0;display:block}
   .sec-dark .band{top:50%;height:400px;margin-top:-200px}
@@ -173,11 +161,6 @@ h1,h2,h3,p{margin:0;font:inherit;letter-spacing:inherit}
   .dark-row .txt p{margin-top:12px}
   .dark-row .img{flex:none;width:250px;order:-1}
   .sec-dl{margin-top:200px}
-  .sec-team{margin-top:400px}
-  .sec-team .mission{margin-top:12px;width:auto;padding:0 24px}
-  .team-row{flex-direction:column;align-items:center;width:100%}
-  .member{margin-bottom:18px}
-  .team-text{margin-top:24px;padding:0 24px}
   .footer .d{display:none}
   .footer .m{display:flex;flex-direction:column;align-items:center;padding:0 40px}
   .footer .m a+a{margin-top:12px}
