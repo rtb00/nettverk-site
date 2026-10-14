@@ -7,7 +7,7 @@ import '../styles/global.css';
 export interface Props {title: string; description?: string; barTitle?: string; hashRedirect?: boolean}
 const {title, description, barTitle, hashRedirect = false} = Astro.props;
 // Alte Flutter-Hash-URLs (/#/impressum) auf die neuen Pfade (/impressum/) umleiten; unbekannte bleiben auf der Startseite.
-const redirect = `(function(){var h=location.hash;if(h.indexOf("#/")!==0)return;var r=h.slice(2).replace(/\\/+$/,"").split(/[?#]/)[0];var ok={"datenschutzerklarung-web":1,"datenschutzerklaerung-app":1,"impressum":1,"agb":1};if(Object.prototype.hasOwnProperty.call(ok,r))location.replace("/"+r+"/");})();`;
+const redirect = `(function(){var h=location.hash;if(h.indexOf("#/")!==0)return;var r=h.slice(2).replace(/\\/+$/,"").split(/[?#]/)[0];var ok={"datenschutzerklarung-web":1,"datenschutzerklaerung-app":1,"impressum":1,"agb":1,"datenloeschung":1};if(Object.prototype.hasOwnProperty.call(ok,r))location.replace("/"+r+"/");})();`;
 ---
 <!doctype html>
 <html lang="de">
