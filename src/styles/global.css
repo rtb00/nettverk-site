@@ -56,8 +56,8 @@ h1,h2,h3,p{margin:0;font:inherit;letter-spacing:inherit}
 .slider{height:140px;overflow:hidden;width:100%;position:relative}
 .slider+.slider{margin-top:12px}
 .slider-track{display:flex;width:max-content;will-change:transform}
-.slider-track.a{animation:slide-a 120s linear infinite}
-.slider-track.b{animation:slide-b 120s linear infinite}
+.slider-track.a{animation:slide-a 120s linear -43s infinite}
+.slider-track.b{animation:slide-b 120s linear -79s infinite}
 @keyframes slide-a{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
 @keyframes slide-b{from{transform:translateX(-33.3333%)}to{transform:translateX(0)}}
 @media (prefers-reduced-motion:reduce){.slider-track{animation:none!important}}
